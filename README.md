@@ -79,6 +79,8 @@ Documents delivered to legal/ — ready for review, not for discovery
 
 ## The Context Graph
 
+![Context Graph](docs/images/architecture-context-graph.svg)
+
 The reasoning engine is a property graph built on Neo4j — not a language model making probabilistic guesses.
 
 Every compliance finding is derived by traversing verified paths between infrastructure nodes and regulatory requirements. If a path exists from a detected service to a legal obligation, the obligation is flagged. If no path exists, nothing is flagged.
@@ -110,6 +112,8 @@ Every document includes a confidence score, a disclaimer confirming draft status
 ---
 
 ## For engineers
+
+![Architecture](docs/images/architecture-two-brains-dark.svg)
 
 One command. Documents in `legal/`. No Word files.
 
@@ -195,8 +199,8 @@ Status: Pre-release · License: AGPL-3.0
 
 - [Context Graph deep dive](docs/architecture/context-graph.md)
 - [Data sovereignty — what stays where](docs/architecture/data-sovereignty.md)
-- [Interactive architecture preview](https://thomasbln.github.io/-Lex-Orchestra/)
-- [Graph visualizer](https://thomasbln.github.io/-Lex-Orchestra/architecture/graph-visualizer.html)
+- [Interactive architecture preview](https://lex-orchestra.com)
+- [Graph visualizer](https://lex-orchestra.com/architecture/graph-visualizer)
 
 ---
 
