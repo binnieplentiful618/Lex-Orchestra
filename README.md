@@ -129,13 +129,13 @@ The Scout detects 50+ services automatically — Stripe, AWS, Postmark, OpenAI, 
 
 ## Data boundary
 
-| Stays local — always | External services receive |
-|---|---|
-| Source code and repository | Neo4j: anonymised UUIDs and abstract asset types only |
-| docker-compose, .env, Dockerfiles | LLM API: anonymised structural context only |
-| PII filtering and classification | Example: "Service type: payment (USA), requires DPA and SCC" |
-| Generated documents (DPA, TOM, SCC) | Never: file names, variables, code, secrets, IP addresses |
-| Scan results and project state | |
+| Stays local — always                | External services receive                                    |
+| ----------------------------------- | ------------------------------------------------------------ |
+| Source code and repository          | Neo4j: anonymised UUIDs and abstract asset types only        |
+| docker-compose, .env, Dockerfiles   | LLM API: anonymised structural context only                  |
+| PII filtering and classification    | Example: "Service type: payment (USA), requires DPA and SCC" |
+| Generated documents (DPA, TOM, SCC) | Never: file names, variables, code, secrets, IP addresses    |
+| Scan results and project state      |                                                              |
 
 Data sovereignty is not a policy statement. It is an architectural constraint.
 
@@ -151,6 +151,7 @@ It should be inspectable, verifiable, and open.
 Regulation defines obligations — but how those obligations are derived should be transparent.
 
 Lex-Orchestra is built as open compliance infrastructure:
+
 - every mapping is visible
 - every decision is traceable
 - every component can be inspected
@@ -166,13 +167,13 @@ Curated control mappings, DPA registries, and jurisdiction layers are available 
 
 ## Comparison
 
-| | Questionnaire tools | Cloud LLM tools | Code upload tools | Lex-Orchestra |
-|---|---|---|---|---|
-| Source of truth | Human memory | Training data | Uploaded code | Live repository |
-| Reasoning | Manual input | Probabilistic | Probabilistic | Deterministic graph |
-| Code leaves network | N/A | Yes | Yes | Never |
-| Auditability | None | None | None | Full — every finding traceable |
-| Output | Checklist | Text suggestions | Text suggestions | Pre-filled drafts with citations |
+|                     | Questionnaire tools | Cloud LLM tools  | Code upload tools | Lex-Orchestra                    |
+| ------------------- | ------------------- | ---------------- | ----------------- | -------------------------------- |
+| Source of truth     | Human memory        | Training data    | Uploaded code     | Live repository                  |
+| Reasoning           | Manual input        | Probabilistic    | Probabilistic     | Deterministic graph              |
+| Code leaves network | N/A                 | Yes              | Yes               | Never                            |
+| Auditability        | None                | None             | None              | Full — every finding traceable   |
+| Output              | Checklist           | Text suggestions | Text suggestions  | Pre-filled drafts with citations |
 
 ---
 
