@@ -56,6 +56,8 @@ The system does not ask what you use. It reads the code and sees it.
 
 ## How it works
 
+![Scout Layers](docs/images/architecture-scout-layers-dark.svg)
+
 1. **Scan** — reads the repository directly (docker-compose, package.json, .env, Dockerfiles, system prompts)
 2. **Detect** — identifies services, sub-processors, AI components, and security signals
 3. **Map** — traverses the Context Graph to derive applicable legal obligations
@@ -78,8 +80,6 @@ Documents delivered to legal/ — ready for review, not for discovery
 ---
 
 ## The Context Graph
-
-![Context Graph](docs/images/architecture-context-graph.svg)
 
 The reasoning engine is a property graph built on Neo4j — not a language model making probabilistic guesses.
 
@@ -113,7 +113,7 @@ Every document includes a confidence score, a disclaimer confirming draft status
 
 ## For engineers
 
-![Architecture](docs/images/architecture-two-brains-dark.svg)
+![Architecture](docs/images/architecture.svg)
 
 One command. Documents in `legal/`. No Word files.
 
