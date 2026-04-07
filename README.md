@@ -1,4 +1,4 @@
-# Lex-Orchestra ⚖️
+# <img src="docs/images/logo.svg" width="40" height="40" align="center" style="border-radius:8px"/> Lex-Orchestra
 
 **Open source compliance infrastructure for regulated software.**  
 Reads your codebase. Maps it to the law. Delivers documents ready for legal review.
@@ -56,7 +56,7 @@ The system does not ask what you use. It reads the code and sees it.
 
 ## How it works
 
-![Sense → Know → Act](docs/images/architecture.svg)
+![Scout Layers](docs/images/architecture-scout-layers-dark.svg)
 
 1. **Scan** — reads the repository directly (docker-compose, package.json, .env, Dockerfiles, system prompts)
 2. **Detect** — identifies services, sub-processors, AI components, and security signals
@@ -76,8 +76,6 @@ Repository (local)
       ↓
 Documents delivered to legal/ — ready for review, not for discovery
 ```
-
-![Scout — three-layer local analysis](docs/images/architecture-scout-layers-dark.svg)
 
 ---
 
@@ -114,6 +112,8 @@ Every document includes a confidence score, a disclaimer confirming draft status
 ---
 
 ## For engineers
+
+![Architecture](docs/images/architecture.svg)
 
 One command. Documents in `legal/`. No Word files.
 
