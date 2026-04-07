@@ -1,4 +1,4 @@
-# <img src="docs/images/logo.svg" width="40" height="40" align="center" style="border-radius:8px"/> Lex-Orchestra
+# Lex-Orchestra ⚖️
 
 **Open source compliance infrastructure for regulated software.**  
 Reads your codebase. Maps it to the law. Delivers documents ready for legal review.
@@ -9,6 +9,15 @@ Reads your codebase. Maps it to the law. Delivers documents ready for legal revi
 
 > Your source code never leaves your network.  
 > Fully local if you need it. Hybrid if you want it.
+
+---
+
+## Status
+
+**Pre-release** — The pipeline is operational. Core documents are generated and tested against real infrastructure.
+
+Active development. APIs and document schemas may change before stable release.  
+Partner access available on request.
 
 ---
 
@@ -56,7 +65,7 @@ The system does not ask what you use. It reads the code and sees it.
 
 ## How it works
 
-![Scout Layers](docs/images/architecture-scout-layers-dark.svg)
+![Sense → Know → Act](docs/images/architecture.svg)
 
 1. **Scan** — reads the repository directly (docker-compose, package.json, .env, Dockerfiles, system prompts)
 2. **Detect** — identifies services, sub-processors, AI components, and security signals
@@ -76,6 +85,8 @@ Repository (local)
       ↓
 Documents delivered to legal/ — ready for review, not for discovery
 ```
+
+![Scout — three-layer local analysis](docs/images/architecture-scout-layers-dark.svg)
 
 ---
 
@@ -112,8 +123,6 @@ Every document includes a confidence score, a disclaimer confirming draft status
 ---
 
 ## For engineers
-
-![Architecture](docs/images/architecture.svg)
 
 One command. Documents in `legal/`. No Word files.
 
@@ -181,17 +190,11 @@ Curated control mappings, DPA registries, and jurisdiction layers are available 
 
 ---
 
-## Status and roadmap
-
-**Operational today:** Full pipeline — scan, graph reasoning, 7 document types, Telegram and web UI delivery.
+## Roadmap
 
 **Next:** Legal News Scanner — monitors regulatory updates and matches them against your specific stack. CI/CD hook for GitHub Actions. PDF output.
 
 **Further ahead:** US law coverage, additional jurisdiction layers, content engine for verified legal updates.
-
-Status: Pre-release · License: AGPL-3.0
-
----
 
 ---
 
